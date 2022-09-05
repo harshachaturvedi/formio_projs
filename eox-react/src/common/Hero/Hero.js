@@ -6,7 +6,7 @@ const Hero = () => {
   const Title = () => (
     <h3 className="title">
       This is the place <img alt="React" src={eoxLogo} className="hero-image" />{" "}
-      Task App
+      PTO App
     </h3>
   );
 
