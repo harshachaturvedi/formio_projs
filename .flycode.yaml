@@ -1,0 +1,11 @@
+version: "0.1"
+environments:
+  - name: main
+    branch: main
+    mode: pull-request
+apps:
+  - name: formio_projs
+    path: eox-react/
+    text-resources:
+      - path: "*.tsx"
+        format: react-hardcoded
