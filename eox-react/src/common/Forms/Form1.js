@@ -7,7 +7,7 @@ const Form1 = () => {
   const Title = () => (
     <h3 className="title">
       Welcome to <img alt="React" src={eoxLogo} className="hero-image" />{" "}
-      Embedded Form Builder!
+      PTO App
     </h3>
   );
 const handleSubmit = () => {
