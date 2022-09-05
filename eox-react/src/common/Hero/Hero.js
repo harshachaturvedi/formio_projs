@@ -5,7 +5,7 @@ import { initAuth, Form } from '@formio/react';
 const Hero = () => {
   const Title = () => (
     <h3 className="title">
-      Welcome to <img alt="React" src={eoxLogo} className="hero-image" />{" "}
+      This is the place <img alt="React" src={eoxLogo} className="hero-image" />{" "}
       Embedded Form Builder!
     </h3>
   );
