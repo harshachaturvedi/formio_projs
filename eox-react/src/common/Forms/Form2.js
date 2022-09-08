@@ -20,7 +20,7 @@ const Form2 = () => {
   return (
     <div className="text-center" style={{ marginTop: "1px" }}>
       <Title />
-      <Form src="https://eoxproductsupport.form.io/ptoindia" onSubmit={handleSubmit} />
+      <Form src="https://eoxproductsupport.form.io/task" onSubmit={handleSubmit} />
     </div>
   );
 };
