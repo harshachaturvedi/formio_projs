@@ -10,6 +10,8 @@
 ./formio/react-app-starterkit.git
 /.pnp
 .pnp.js
+package-lock.json
+.gitignore
 
 # testing
 /coverage
