@@ -22,7 +22,7 @@ const Form1 = () => {
         pathname: '/Forms2',
         query: { fullName: `${res.data.name}`}
       }} > This is the state </Link >
-      // window.location = "/Form2"
+      window.location = "/Form2"
     });
   };
   return (
