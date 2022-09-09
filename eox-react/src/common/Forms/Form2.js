@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import eoxLogo from "../../assets/eox_logo.png";
-import { initAuth, Form } from '@formio/react';
+import { Form } from '@formio/react';
 import axios from "axios";
-const baseurl = "https://eoxproductsupport.form.io"
+// const baseurl = "https://eoxproductsupport.form.io"
 
 const Form2 = () => {
+  // console.log(`The name got from screen 1 is ${fullName}`)
   const Title = () => (
     <h3 className="title">
       Welcome to <img alt="React" src={eoxLogo} className="hero-image" />{" "}
@@ -20,7 +21,10 @@ const Form2 = () => {
   return (
     <div className="text-center" style={{ marginTop: "1px" }}>
       <Title />
-      <Form src="https://eoxproductsupport.form.io/task" onSubmit={handleSubmit} />
+      {/* console.log(`ID = ${this.props.location.state.id}`);
+      console.log(`Name = ${this.props.location.state.name}`);
+      console.log(`email = ${this.props.location.state.email}`); */}
+      <Form src="https://eoxproductsupport.form.io/pto" onSubmit={handleSubmit} />
     </div>
   );
 };

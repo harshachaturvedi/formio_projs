@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { initAuth } from '@formio/react';
 import { useAuth, AuthPage } from './modules/auth';
 import { FormProvider, FormsPage } from './modules/forms/form';
-import { Footer, Header, Home, Loading, Modal, Form1, Form2 } from './common';
+import { Footer, Header, Home, Loading, Modal, Form2 } from './common';
 import { AppConfig } from './config';
 import './App.scss';
 import EventsPage from './modules/events/components/EventsPage';

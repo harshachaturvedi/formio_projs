@@ -1,6 +1,4 @@
-import React from 'react';
 import Form1 from '../Forms/Form1';
-import Form2 from '../Forms/Form2';
 import { useAuth } from '../../modules/auth';
 
 const Home = () => {
@@ -19,15 +17,6 @@ const Home = () => {
   return (
     <div>
       <Form1/>
-      <div className="container">
-        { authState.authenticated ? (
-          <div className="well text-center">
-            <Greeting/>
-          </div>)
-          : null
-        }
-      </div>
-      <Form2/>
       <div className="container">
         { authState.authenticated ? (
           <div className="well text-center">

@@ -1,6 +1,6 @@
 import React from "react";
 import eoxLogo from "../../assets/eox_logo.png";
-import { initAuth, Form } from '@formio/react';
+import { Form } from '@formio/react';
 
 const Hero = () => {
   const Title = () => (
