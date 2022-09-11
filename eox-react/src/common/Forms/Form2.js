@@ -1,11 +1,16 @@
 import React from 'react';
-import eoxLogo from "../../assets/eox_logo.png";
+import { NavLink, useSearchParams } from 'react-router-dom';
 import { Form } from '@formio/react';
+import eoxLogo from "../../assets/eox_logo.png";
 import axios from "axios";
-// const baseurl = "https://eoxproductsupport.form.io"
 
-const Form2 = () => {
-  // console.log(`The name got from screen 1 is ${fullName}`)
+
+const Form2 = (props) => {
+  const [searchParams] = useSearchParams();
+  let name = searchParams.get("name");
+  let username = searchParams.get("username");
+  let email = searchParams.get("email");
+
   const Title = () => (
     <h3 className="title">
       Welcome to <img alt="React" src={eoxLogo} className="hero-image" />{" "}
@@ -20,10 +25,13 @@ const Form2 = () => {
 
   return (
     <div className="text-center" style={{ marginTop: "1px" }}>
+      <NavLink to="/" activeClassName="active">
+        Go Back
+      </NavLink>
+      <p>Name = {name}</p>
+      <p>Username = {username}</p>
+      <p>email = {email}</p>
       <Title />
-      {/* console.log(`ID = ${this.props.location.state.id}`);
-      console.log(`Name = ${this.props.location.state.name}`);
-      console.log(`email = ${this.props.location.state.email}`); */}
       <Form src="https://eoxproductsupport.form.io/pto" onSubmit={handleSubmit} />
     </div>
   );
