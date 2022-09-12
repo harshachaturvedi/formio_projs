@@ -10,6 +10,7 @@ const Form2 = (props) => {
   let name = searchParams.get("name");
   let username = searchParams.get("username");
   let email = searchParams.get("email");
+  
 
   const Title = () => (
     <h3 className="title">
