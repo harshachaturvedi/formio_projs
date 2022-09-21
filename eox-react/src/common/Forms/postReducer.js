@@ -4,7 +4,7 @@ export const INITIAL_STATE = {
    loading: false,
    post: {},
    error: null,
-   name: '',
+   name: '1',
    username: '',
    email: '',
 };
@@ -19,7 +19,6 @@ export const postReducer = (state = INITIAL_STATE, action) => {
          return {
             ...state,
             loading: false,
-            post: action.payload,
             name: action.name,
             username: action.username,
             email: action.email,
@@ -38,6 +37,8 @@ export const postReducer = (state = INITIAL_STATE, action) => {
          return state.username;
       case ACTION_TYPES.POST_EMAIL:
          return state.email;
+      case ACTION_TYPES.POST_STATE:
+         return state;
       default:
          return state;
    }
