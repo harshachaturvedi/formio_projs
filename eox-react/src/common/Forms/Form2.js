@@ -1,26 +1,24 @@
-import { React, useReducer} from 'react';
+import { React } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import { Form } from '@formio/react';
 import eoxLogo from "../../assets/eox_logo.png";
 import axios from "axios";
-import { postReducer } from './postReducer';
-import { ACTION_TYPES } from "./postActionTypes";
+import { useGlobalState } from './GState';
 
 
-const Form2 = (props) => {
-  // const [state, setPost] = useReducer(postReducer)
-
-  // const local_state = setPost({ type: ACTION_TYPES.POST_REQUEST })
-  // console.log(`Form2:username from state = ${state.username}`);
-  // console.log(`Form2:username = ${local_state.username}`);
-  // console.log(`Form2:name = ${local_state.name}`);
-  // console.log(`Form2:email = ${local_state.email}`);
-
+const Form2 = ({route, navigation}) => {
+  // TBC: How to get the data from the URL
   const [searchParams] = useSearchParams();
   let name = searchParams.get("name");
   let username = searchParams.get("username");
   let email = searchParams.get("email");
 
+  // const { itemID, otherParams } = route.params;
+  // const itemString = JSON.stringify(itemID);
+  // const otherParamsString = JSON.stringify(otherParams);
+  const fullName = useGlobalState("fullname");
+  // console.log(`Stringified itemID = ${itemString}`);
+  // console.log(`Stringified otherParams = ${otherParamsString}`);
 
   const Title = () => (
     <h3 className="title">
@@ -42,9 +40,12 @@ const Form2 = (props) => {
       <p>Name = {name}</p>
       <p>Username = {username}</p>
       <p>email = {email}</p>
-      {/* <p>The state = {state}</p> */}
+      <p>Full name = {fullName}</p>
       <Title />
-      <Form src="https://eoxproductsupport.form.io/pto" onSubmit={handleSubmit} />
+      <Form src="https://eoxproductsupport.form.io/prospectHC"
+        onSubmit={handleSubmit}
+      />
+      The full name = {useGlobalState('fullname')}
     </div>
   );
 };

@@ -1,14 +1,14 @@
 import { ACTION_TYPES } from "./postActionTypes";
 
-export const INITIAL_STATE = {
+export const initialGlobalState = {
    loading: false,
    post: {},
    error: null,
-   name: '1',
+   name: 'John Doe',
    username: '',
    email: '',
 };
-export const postReducer = (state = INITIAL_STATE, action) => {
+export const GlobalStateProvider = (state = initialGlobalState, action) => {
    switch (action.type) {
       case ACTION_TYPES.POST_REQUEST:
          return {

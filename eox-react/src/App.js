@@ -3,13 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import { initAuth } from '@formio/react';
 import { useAuth, AuthPage } from './modules/auth';
 import { FormProvider, FormsPage } from './modules/forms/form';
-import { Footer, Header, Home, Loading, Modal, Form2 } from './common';
+import { Footer, Header, Home, Loading, Modal, Form2, Form3 } from './common';
 import { AppConfig } from './config';
 import './App.scss';
 import EventsPage from './modules/events/components/EventsPage';
 import { Alerts, AlertsProvider } from './modules/alerts';
 
-function App() {
+const App = () => {
+  
   const { dispatch, state: { isActive } } = useAuth();
 
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Form2" element={<Form2 />} />
+              <Route path="/Form3" element={<Form3 />} />
               <Route path="/form/*" element={<FormsPage />} />
               <Route path="/event/*" element={ <FormProvider><EventsPage /></FormProvider>} />
               <Route path="/auth" element={<AuthPage />} />
