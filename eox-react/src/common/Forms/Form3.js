@@ -1,14 +1,20 @@
 import React from "react";
 import { Form } from "@formio/react";
+import eoxLogo from "../../assets/eox_logo.png";
 
 const Form3 = () => {
-   const [formData, setFormData] = React.useState({firstName: "John", lastName: "Chaturvedi"});
-   // console.log(formData);
-   const formData2 = setFormData(...formData);
-   console.log(formData2);
-   return (
+  const [formData, setFormData] = React.useState({firstName: "John", lastName: "Chaturvedi"});
+  console.log(formData);
+
+  const Title = () => (
+    <h3 className="title">
+      Welcome to <img alt="React" src={eoxLogo} className="hero-image" /> Example
+      App
+    </h3>
+  );
+  return (
    <div>
-      <h1>Works</h1>
+      <Title></Title>
       <Form
             submission={{ data: formData }}
             src="https://example.form.io/example"
